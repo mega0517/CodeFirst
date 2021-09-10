@@ -8,3 +8,4 @@ import tensorflow as tf
 
 
 # Hello bhkim
+import numpy as np
