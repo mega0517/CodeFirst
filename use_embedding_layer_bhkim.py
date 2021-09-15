@@ -11,12 +11,12 @@ sequences = tokenizer.texts_to_sequences(texts)
 binary_results = tokenizer.sequences_to_matrix(sequences, mode= 'binary')
 
 print(tokenizer.word_index)
-print('+++++++++++++++++')
+print('qqqqqqqqqqqqq')
 
 print(f'sequences : {sequences} \n')
 print(f'binary_vectors : \n {binary_results} \n')
 
-print(to_categorical(sequences))
+# print(to_categorical(sequences))
 
 test_text = ['You are the One']
 test_seq = tokenizer.texts_to_sequences(test_text)
