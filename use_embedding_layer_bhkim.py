@@ -1,5 +1,5 @@
-import tensorflow as tf
 from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.utils import to_categorical
 
 texts = ['You are the Best', 'You are the Nice']
 
@@ -16,7 +16,7 @@ print('+++++++++++++++++')
 print(f'sequences : {sequences} \n')
 print(f'binary_vectors : \n {binary_results} \n')
 
-# print(to_categorical(sequences))
+print(to_categorical(sequences))
 
 test_text = ['You are the One']
 test_seq = tokenizer.texts_to_sequences(test_text)
