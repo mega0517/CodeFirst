@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "/Users/bhkim/opt/anaconda3/envs/keras_study/bin/python"
+    "python.pythonPath": "/Users/bhkim/opt/anaconda3/envs/keras_study/bin/python",
+    "python.languageServer": "Pylance"
 }
