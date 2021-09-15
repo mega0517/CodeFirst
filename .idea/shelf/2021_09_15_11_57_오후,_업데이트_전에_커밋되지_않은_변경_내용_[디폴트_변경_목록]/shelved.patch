@@ -1,0 +1,77 @@
+Index: use_embedding_layer_bhkim.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from tensorflow.keras.preprocessing.text import Tokenizer\nimport tensorflow as tf\n\ntexts = ['You are the Best', 'You are the Nice']\n\ntokenizer = Tokenizer(num_words=10, oov_token='<OOV>')\ntokenizer.fit_on_texts(texts)\n\nsequences = tokenizer.texts_to_sequences(texts)\n\nbinary_results = tokenizer.sequences_to_matrix(sequences, mode= 'binary')\n\nprint(tokenizer.word_index)\nprint('+++++++++++++++++ ')\n\nprint(f'sequences : {sequences} \\n')\nprint(f'binary_vectors : \\n {binary_results} \\n')\n\n# print(to_categorical(sequences))\n\ntest_text = ['You are the One']\ntest_seq = tokenizer.texts_to_sequences(test_text)\n\nprint(f'test sequences : {test_seq}')\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/use_embedding_layer_bhkim.py b/use_embedding_layer_bhkim.py
+--- a/use_embedding_layer_bhkim.py	(revision af138e59653498e90f0854bb85ab87f5cd0c0daa)
++++ b/use_embedding_layer_bhkim.py	(date 1631717798777)
+@@ -1,5 +1,5 @@
+ from tensorflow.keras.preprocessing.text import Tokenizer
+-import tensorflow as tf
++
+ 
+ texts = ['You are the Best', 'You are the Nice']
+ 
+@@ -11,7 +11,7 @@
+ binary_results = tokenizer.sequences_to_matrix(sequences, mode= 'binary')
+ 
+ print(tokenizer.word_index)
+-print('+++++++++++++++++ ')
++print('qqqqqqqqqqqqq')
+ 
+ print(f'sequences : {sequences} \n')
+ print(f'binary_vectors : \n {binary_results} \n')
+Index: .gitignore
+===================================================================
+diff --git a/.gitignore b/.gitignore
+deleted file mode 100644
+--- a/.gitignore	(revision af138e59653498e90f0854bb85ab87f5cd0c0daa)
++++ /dev/null	(revision af138e59653498e90f0854bb85ab87f5cd0c0daa)
+@@ -1,1 +0,0 @@
+-use_embedding_layer_bhkim.py
+Index: .idea/.gitignore
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+deleted file mode 100644
+--- a/.idea/.gitignore	(revision af138e59653498e90f0854bb85ab87f5cd0c0daa)
++++ /dev/null	(revision af138e59653498e90f0854bb85ab87f5cd0c0daa)
+@@ -1,3 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.6 (keras_study)\" project-jdk-type=\"Python SDK\" />\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision af138e59653498e90f0854bb85ab87f5cd0c0daa)
++++ b/.idea/misc.xml	(date 1631717765813)
+@@ -1,4 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6 (keras_study)" project-jdk-type="Python SDK" />
++  <component name="PyCharmProfessionalAdvertiser">
++    <option name="shown" value="true" />
++  </component>
+ </project>
+\ No newline at end of file
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># CodeFirst\nfor mega0517's private self study\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/README.md b/README.md
+--- a/README.md	(revision af138e59653498e90f0854bb85ab87f5cd0c0daa)
++++ b/README.md	(date 1631705562416)
+@@ -1,2 +1,2 @@
+ # CodeFirst
+-for mega0517's private self study
++Private Study Git
